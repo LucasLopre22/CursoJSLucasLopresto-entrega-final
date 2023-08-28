@@ -73,11 +73,12 @@ function guardarHistorialEnLocalStorage() {
     localStorage.setItem('historialOperaciones', JSON.stringify(operaciones));
 }
 function cargarHistorico() {
-    fetch('./ruta_historial_operaciones.json') // Acá temgo un error VER,  para mi la ruta está mal
+    fetch('historial_operaciones.json')
         .then(response => response.json())
         .then(data => mostrarHistoricoAsincrono(data))
         .catch(error => console.error('Error al cargar el historial:', error));
 }
+
 
 function mostrarHistoricoAsincrono(data) {
     const historicoTable = document.getElementById('historico');
@@ -91,13 +92,3 @@ function mostrarHistoricoAsincrono(data) {
         resultCell.textContent = op.resultado;
     });
 }
-[
-    {
-        "expresion": "2 + 2",
-        "resultado": "4"
-    },
-    {
-        "expresion": "5 * 3",
-        "resultado": "15"
-    }
-]

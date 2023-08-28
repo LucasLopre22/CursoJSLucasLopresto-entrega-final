@@ -1,0 +1,10 @@
+[
+    {
+        "expresion": "2 + 2",
+        "resultado": "4"
+    },
+    {
+        "expresion": "5 * 3",
+        "resultado": "15"
+    }
+]
